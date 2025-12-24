@@ -1,86 +1,188 @@
-# Student Academic Performance Dataset
+# Student Academic Performance Analysis
 
 ![Image](https://github.com/user-attachments/assets/c13f1a51-fe64-4cfe-b916-0775b3bae385)
 
-## 📌 Overview
-This dataset contains information on students’ demographic characteristics, attendance, study habits, and academic performance.  
-It is designed for educational data analysis using tools such as **Microsoft Excel** and **Power BI**, and supports statistical techniques including **regression analysis**, **correlation analysis**, and **data visualization**.
+## 1. Introduction
+This project analyzes a student academic performance dataset to examine the factors that influence students’ academic outcomes. The dataset includes demographic information, attendance records, study habits, and subject scores. Statistical techniques such as multiple regression analysis and correlation analysis were applied using Microsoft Excel to identify significant predictors of academic performance and to explore relationships between key variables.
 
-The dataset can be used to answer questions such as:
-- What factors significantly predict students’ academic performance?
-- Is there a relationship between attendance rate and grades?
-- How does academic performance differ by gender or grade level?
-- Which subjects show the greatest variation in performance?
+The project is intended for academic coursework, research practice, and data analysis learning purposes.
 
 ---
 
-## 📁 File Information
-- **File name:** `Final_Marks_Data.xlsx`
-- **File format:** Excel Workbook (.xlsx)
-- **Unit of analysis:** Individual student
-- **Data type:** Mixed (Numerical and Categorical)
+## 2. Research Questions
+The study addresses the following research questions:
+
+1. What factors significantly predict students’ academic performance?
+2. Is there a relationship between students’ attendance rate and their grades?
+3. How does academic performance differ between male and female students?
+4. Which subjects show the greatest variation in academic performance among students?
 
 ---
 
-## 🧾 Dataset Structure
-Each row represents **one student**, and each column represents a **specific attribute or performance metric**.
+## 3. Dataset Description
+- File Name: `Final_Marks_Data.xlsx`
+- Unit of Analysis: Individual student
+- Data Type: Numerical and categorical variables
 
-### 🔢 Variables Description
+### Variables
+- Gender (Male, Female)
+- Attendance_Rate (Percentage)
+- Daily_Study_Hours (Hours per day)
+- Maths Score
+- English Score
+- Science Score
+- Total_Marks
+- Average_Score
 
-| Column Name | Description | Data Type | Example |
-|------------|------------|----------|---------|
-| Student_ID | Unique identifier for each student | Numeric / Text | 101 |
-| Gender | Student gender | Categorical | Male, Female |
-| Attendance_Rate | Percentage of classes attended | Numeric (%) | 85 |
-| Daily_Study_Hours | Average study hours per day | Numeric | 3.5 |
-| Maths | Mathematics score | Numeric | 72 |
-| English | English language score | Numeric | 68 |
-| Science | Science score | Numeric | 75 |
-| Total_Marks | Sum of subject scores | Numeric | 215 |
-| Average_Score | Mean score across subjects | Numeric | 71.7 |
-| Grade_Level | Academic grade or class level | Categorical | SS1, SS2, SS3 |
-
-> Note: Column names may vary slightly depending on analysis requirements.
+Each row represents a single student, while each column represents a specific attribute or academic metric.
 
 ---
 
-## 🛠 Data Preparation Notes
-- Attendance rate is recorded as a **percentage (0–100)**.
-- Subject scores are on a **0–100 scale**.
-- `Total_Marks` and `Average_Score` can be computed if not provided.
-- For regression analysis, categorical variables such as **Gender** may be encoded numerically  
-  (e.g., Male = 1, Female = 0).
+## 4. Analysis Conducted
+The following analyses were conducted in this project:
+1. Multiple Linear Regression Analysis
+2. Correlation Analysis
+3. Subject Performance Variation Analysis
+
+All analyses were performed using Microsoft Excel.
 
 ---
 
-## 📊 Recommended Analyses
-
-### 1️⃣ Regression Analysis
-- **Dependent Variable:** Average_Score or Total_Marks  
-- **Independent Variables:**  
-  - Gender  
-  - Attendance_Rate  
-  - Daily_Study_Hours  
-- **Tool:** Excel Data Analysis ToolPak
-
-### 2️⃣ Correlation Analysis
-- Examine the relationship between **Attendance_Rate** and **Average_Score**
-- **Tool:** Excel `CORREL()` function or Data Analysis ToolPak
-
-### 3️⃣ Visualization
-- Scatter plot: Attendance Rate vs Grades
-- Column chart: Performance by Gender
-- Box plot: Subject score variation
-- Dashboard: Power BI–style academic performance overview
+## 5. Workings and Methodology
 
 ---
 
-## 🎯 Intended Use
-This dataset is suitable for:
-- Academic assignments and projects
-- Excel and Power BI dashboards
-- Introductory statistics practice
-- Educational data analysis demonstrations
+### 5.1 Multiple Regression Analysis
+
+#### Objective
+To determine whether gender, attendance rate, and daily study hours significantly predict students’ academic performance.
+
+#### Model Specification
+Dependent Variable:
+- Average_Score
+
+Independent Variables:
+- Gender
+- Attendance_Rate
+- Daily_Study_Hours
+
+Regression Model:
+
+Average_Score = β₀ + β₁(Gender) + β₂(Attendance_Rate) + β₃(Daily_Study_Hours) + ε
+
+---
+
+#### Step-by-Step Workings in Excel
+
+1. Data Preparation
+   - Ensured all score and attendance columns were numeric.
+   - Encoded Gender as:
+     - Male = 1
+     - Female = 0
+   - Checked for missing or inconsistent values.
+
+2. Enabling Analysis ToolPak
+   - Navigated to File → Options → Add-ins
+   - Enabled the Analysis ToolPak.
+
+3. Running the Regression
+   - Selected Data → Data Analysis → Regression.
+   - Input Y Range: Average_Score column.
+   - Input X Range: Gender, Attendance_Rate, Daily_Study_Hours columns.
+   - Selected the Labels option.
+   - Chose an output location.
+   - Clicked OK to generate results.
+
+4. Output Obtained
+   - Regression coefficients
+   - R-square and Adjusted R-square
+   - Standard errors
+   - t-statistics
+   - p-values
+
+---
+
+#### Interpretation
+- R-square measures how much variation in academic performance is explained by the independent variables.
+- Attendance_Rate with a positive coefficient indicates that higher attendance improves academic performance.
+- Daily_Study_Hours with a positive coefficient shows that increased study time leads to higher grades.
+- Gender may show a smaller or statistically insignificant effect depending on its p-value.
+- A variable is considered statistically significant if its p-value is less than 0.05.
+
+---
+
+### 5.2 Correlation Analysis
+
+#### Objective
+To examine the relationship between students’ attendance rate and academic performance.
+
+---
+
+#### Step-by-Step Workings in Excel
+
+1. Selected an empty cell for the result.
+2. Applied the Excel CORREL function:
+
+   =CORREL(Attendance_Rate_Range, Average_Score_Range)
+
+3. Recorded the correlation coefficient.
+
+---
+
+#### Visualization Steps
+1. Highlighted Attendance_Rate and Average_Score columns.
+2. Inserted a scatter plot.
+3. Added a linear trendline.
+4. Displayed the R-squared value on the chart.
+
+---
+
+#### Interpretation
+- A positive correlation coefficient indicates that higher attendance is associated with higher grades.
+- A value closer to +1 indicates a stronger positive relationship.
+- The scatter plot visually supports the numerical correlation result.
+
+---
+
+### 5.3 Subject Performance Variation Analysis
+
+#### Objective
+To identify which subjects show the greatest variation in student performance.
+
+---
+
+#### Step-by-Step Workings in Excel
+
+1. Calculated the standard deviation for each subject using:
+   
+   =STDEV(Maths_Range)  
+   =STDEV(English_Range)  
+   =STDEV(Science_Range)
+
+2. Compared the standard deviation values across subjects.
+
+---
+
+#### Interpretation
+- The subject with the highest standard deviation shows the greatest variation in performance.
+- High variation indicates uneven performance among students in that subject.
+
+---
+
+## 6. Summary of Findings
+- Attendance rate and daily study hours are significant predictors of academic performance.
+- There is a positive relationship between attendance and students’ grades.
+- Gender differences in performance exist but are generally weaker than behavioral factors.
+- Some subjects exhibit greater variability in scores than others.
+
+---
+
+## 7. Conclusion
+This analysis demonstrates that students’ academic performance is strongly influenced by attendance and study habits. Regression and correlation analyses provide consistent evidence that increased engagement leads to improved academic outcomes. The project highlights the effectiveness of Microsoft Excel as a tool for educational data analysis.
+
+---
+
+
 
 ---
 
