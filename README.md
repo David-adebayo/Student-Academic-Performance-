@@ -1,5 +1,7 @@
 # Student Academic Performance Dataset
 
+![Image](https://github.com/user-attachments/assets/c13f1a51-fe64-4cfe-b916-0775b3bae385)
+
 ## 📌 Overview
 This dataset contains information on students’ demographic characteristics, attendance, study habits, and academic performance.  
 It is designed for educational data analysis using tools such as **Microsoft Excel** and **Power BI**, and supports statistical techniques including **regression analysis**, **correlation analysis**, and **data visualization**.
