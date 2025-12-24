@@ -82,18 +82,5 @@ This dataset is suitable for:
 
 ---
 
-## ⚠️ Limitations
-- Dataset size may be limited.
-- Results should not be generalized beyond the dataset.
-- External factors (e.g., socioeconomic status, teaching quality) are not included.
 
----
-
-## 👤 Author / Prepared By
-Prepared for academic analysis and learning purposes.
-
----
-
-## 📜 License
-This dataset is provided strictly for **educational and non-commercial use**.
 
