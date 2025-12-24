@@ -180,8 +180,7 @@ To identify which subjects show the greatest variation in student performance.
 ## 7. Conclusion
 This analysis demonstrates that students’ academic performance is strongly influenced by attendance and study habits. Regression and correlation analyses provide consistent evidence that increased engagement leads to improved academic outcomes. The project highlights the effectiveness of Microsoft Excel as a tool for educational data analysis.
 
----
-
+I am open to colloborate on data analysis, statistical analysis, visualization related project or any kinds. You can reach me via email [oluwatimileyindavid17@gmail.com]
 
 
 ---
